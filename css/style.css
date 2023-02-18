@@ -203,7 +203,8 @@ span{
 }
  .item{
      display: grid;
-     grid-template-columns: 150px 350px;
+     --sizeContac: 150px;
+     grid-template-columns: var(--sizeContac) 350px;
      margin-bottom: 5px;
      justify-content: center;
      
@@ -224,6 +225,34 @@ input[type="submit"]{
 }
 .logo{
     padding-left: 50px;
+}
+@media (max-width: 900px) {
+    .gridexp{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cardexp{
+        width: 300px;
+    }
+    #experience{
+        padding: 10px 25px;
+    }
+}
+@media (max-width: 700px) {
+    .gridexp{
+        display: flex;
+        justify-content: center;
+    }
+    .filaportfolio{
+        display: flex;
+        justify-content: center;
+    }
+    .item {
+        --sizeContac: 71px;
+    }
+  
 }
 
 
